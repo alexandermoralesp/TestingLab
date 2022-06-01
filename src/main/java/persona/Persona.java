@@ -1,13 +1,9 @@
 package persona;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.Locale;
-import java.util.concurrent.TimeUnit;
 
 public class Persona {
     private String name;
@@ -25,7 +21,7 @@ public class Persona {
         this.nacimiento = nacimiento;
     }
 
-    public boolean esMayorDeEdad() throws ParseException {
+    public boolean esMayorDeEdad() {
         Period interval = Period.between(nacimiento,consulta);
         return (interval.getYears() >= 18);
     }

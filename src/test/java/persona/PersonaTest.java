@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class PersonaTest extends TestCase {
-    Persona persona;
+    Persona persona; Persona persona2;
     LocalDate fechaNacimiento;
     LocalDate fechaConsulta;
     DateTimeFormatter sdf = DateTimeFormatter.ofPattern("MM/dd/yyyy", Locale.ENGLISH);
@@ -20,12 +20,15 @@ public class PersonaTest extends TestCase {
         fechaNacimiento = LocalDate.parse("06/24/2000", sdf);
         fechaConsulta = LocalDate.parse("06/23/2018", sdf);
         persona = new Persona("Alexander","Morales Panitz", fechaNacimiento, fechaConsulta);
+        fechaConsulta = LocalDate.parse("06/23/2020", sdf);
+        persona2 = new Persona("Alexander","Morales Panitz", fechaNacimiento, fechaConsulta);
     }
 
     @Test
     @DisplayName("¿Es mayor de edad?")
     public void testMayorDeEdad() throws ParseException {
         assertFalse("Es menor de edad", persona.esMayorDeEdad());
+        assertTrue("Es mayor de edad", persona2.esMayorDeEdad());
     }
     @Test
     public void testgetname() throws ParseException{

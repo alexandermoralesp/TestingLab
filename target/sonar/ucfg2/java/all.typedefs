@@ -86,7 +86,4 @@ $addTo(Ljava/time/temporal/Temporal;)Rjava.time.Period#addTo(Ljava/time/tempora
 withDays(I).java.time.Period#withDays(I)Ljava/time/Period;y
 )from(Ljava/time/temporal/TemporalAmount;)Ljava.time.Period#from(Ljava/time/temporal/TemporalAmount;)Ljava/time/Period;.
 isNegative()java.time.Period#isNegative()Zç
-3between(Ljava/time/LocalDate;Ljava/time/LocalDate;)Vjava.time.Period#between(Ljava/time/LocalDate;Ljava/time/LocalDate;)Ljava/time/Period;ì
-org.example.Appjava.lang.Object%
-<init>()org.example.App#<init>()VG
-main([Ljava/lang/String;)*org.example.App#main([Ljava/lang/String;)V
+3between(Ljava/time/LocalDate;Ljava/time/LocalDate;)Vjava.time.Period#between(Ljava/time/LocalDate;Ljava/time/LocalDate;)Ljava/time/Period;

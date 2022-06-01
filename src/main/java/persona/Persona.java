@@ -8,9 +8,9 @@ import java.util.Locale;
 public class Persona {
     private String name;
     private String lastName;
-    public static String pattern = "MM/dd/yyyy";
+    public static final String PATTERN = "MM/dd/yyyy";
 
-    DateTimeFormatter sdf = DateTimeFormatter.ofPattern("MM/dd/yyyy", Locale.ENGLISH);
+    DateTimeFormatter sdf = DateTimeFormatter.ofPattern(PATTERN, Locale.ENGLISH);
     LocalDate consulta;
     LocalDate nacimiento;
 
@@ -22,7 +22,7 @@ public class Persona {
     }
 
     public boolean esMayorDeEdad() {
-        Period interval = Period.between(nacimiento,consulta);
+        Period interval = Period.between(consulta,nacimiento);
         return (interval.getYears() >= 18);
     }
 
